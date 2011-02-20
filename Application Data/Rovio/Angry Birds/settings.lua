@@ -1,22 +1,28 @@
 lastOpenLevelLP3 = 1
 openGoldenEggLevels = {
+    Level3 = 0,
 
 }
 lastOpenLevelLP4 = 1
 lastOpenLevelLP2 = 1
 audioEnabled = true
-bullsEye = false
+eaglesUsedIn = {
+
+}
+bullsEye = true
 selectedEpisode = 1
-cumulativeStars = 32
-playtime = 1827.35
+cumulativeScore = "1703600"
+cumulativeStars = 67
+lastOpenLevel = 38
 gameStarted = true
-cumulativeScore = "684740"
-birdsShooted = 138
+mightyEagleEnabled = false
+birdsShooted = 451
 currentZoomLevelMainMenu = 1.83333
-wilhelmTell = false
+wilhelmTell = true
+gameRestarted = 18
 tutorials = {
-    BIRD_YELLOW = {
-        sprite = "TUTORIAL_3",
+    BIRD_GREY = {
+        sprite = "TUTORIAL_4",
 
     },
     BIRD_BLUE = {
@@ -27,13 +33,18 @@ tutorials = {
         sprite = "TUTORIAL_1",
 
     },
+    BIRD_YELLOW = {
+        sprite = "TUTORIAL_3",
+
+    },
+    BIRD_GREEN = {
+        sprite = "TUTORIAL_5",
+
+    },
 
 }
-eaglesUsedIn = {
-
-}
-currentMainMenuTheme = "theme1"
-totalLevelsCompleted = 19
+currentMainMenuTheme = "theme2"
+totalLevelsCompleted = 39
 eaglesAvailable = {
     extra = 1,
     pack4 = 1,
@@ -41,15 +52,15 @@ eaglesAvailable = {
     basic = 1,
 
 }
-mightyEagleEnabled = false
-gameRestarted = 4
 currentLevelSelectionPages = {
     pack4 = 1,
-    basic = 1,
+    basic = 2,
     pack3 = 1,
     goldeneggs = 1,
     extra = 1,
 
 }
-lastOpenLevel = 18
-gameStarts = 2
+averagePlaytime = "1063"
+theme1Completed = true
+playtime = "4711"
+gameStarts = 4

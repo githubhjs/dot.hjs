@@ -1,22 +1,15 @@
-Level57 = {
+Level44 = {
     completed = true,
-    birds = 3,
-    score = 43220,
-    lowScore = 43220,
+    birds = 7,
+    score = 69170,
+    lowScore = 69170,
 
 }
-LevelGE_2 = {
-    completed = false,
-    birds = 0,
-    score = 0,
-    lowScore = 0,
-
-}
-Level17 = {
+Level23 = {
     completed = true,
-    birds = 3,
-    score = 36160,
-    lowScore = 36160,
+    birds = 4,
+    score = 42860,
+    lowScore = 42860,
 
 }
 Level1 = {
@@ -33,32 +26,46 @@ Level9 = {
     lowScore = 46510,
 
 }
-Level2 = {
-    completed = true,
-    birds = 3,
-    score = 25780,
-    lowScore = 25780,
-
-}
-Level7 = {
+Level52 = {
     completed = true,
     birds = 4,
-    score = 25140,
-    lowScore = 25140,
+    score = 47190,
+    lowScore = 47190,
 
 }
-Level5 = {
+Level31 = {
     completed = true,
     birds = 3,
-    score = 34870,
-    lowScore = 34870,
+    score = 41120,
+    lowScore = 41120,
 
 }
-Level4 = {
+Level36 = {
     completed = true,
-    birds = 2,
-    score = 37070,
-    lowScore = 37070,
+    birds = 3,
+    score = 51210,
+    lowScore = 51210,
+
+}
+Level35 = {
+    completed = true,
+    birds = 6,
+    score = 39450,
+    lowScore = 39450,
+
+}
+Level39 = {
+    completed = true,
+    birds = 3,
+    score = 62300,
+    lowScore = 62300,
+
+}
+Level12 = {
+    completed = true,
+    birds = 3,
+    score = 36470,
+    lowScore = 36470,
 
 }
 Level14 = {
@@ -82,20 +89,6 @@ Level8 = {
     lowScore = 58620,
 
 }
-Level13 = {
-    completed = true,
-    birds = 4,
-    score = 36420,
-    lowScore = 36420,
-
-}
-Level42 = {
-    completed = true,
-    birds = 4,
-    score = 103960,
-    lowScore = 103960,
-
-}
 Level53 = {
     completed = true,
     birds = 1,
@@ -103,11 +96,109 @@ Level53 = {
     lowScore = 42440,
 
 }
+Level3 = {
+    completed = true,
+    birds = 4,
+    score = 11120,
+    lowScore = 11120,
+
+}
+Level76 = {
+    completed = true,
+    birds = 3,
+    score = 29210,
+    lowScore = 29210,
+
+}
+Level88 = {
+    completed = true,
+    birds = 4,
+    score = 62720,
+    lowScore = 62720,
+
+}
+Level57 = {
+    completed = true,
+    birds = 3,
+    score = 43220,
+    lowScore = 43220,
+
+}
+LevelGE_2 = {
+    completed = false,
+    birds = 0,
+    score = 0,
+    lowScore = 0,
+
+}
+Level85 = {
+    completed = true,
+    birds = 3,
+    score = 58850,
+    lowScore = 58850,
+
+}
+Level2 = {
+    completed = true,
+    birds = 3,
+    score = 25780,
+    lowScore = 25780,
+
+}
+Level7 = {
+    completed = true,
+    birds = 4,
+    score = 25140,
+    lowScore = 25140,
+
+}
+Level24 = {
+    completed = true,
+    birds = 2,
+    score = 49060,
+    lowScore = 49060,
+
+}
+Level4 = {
+    completed = true,
+    birds = 2,
+    score = 37070,
+    lowScore = 37070,
+
+}
+Level66 = {
+    completed = true,
+    birds = 3,
+    score = 50530,
+    lowScore = 50530,
+
+}
 Level34 = {
     completed = true,
     birds = 3,
     score = 59890,
     lowScore = 59890,
+
+}
+Level26 = {
+    completed = true,
+    birds = 3,
+    score = 39270,
+    lowScore = 39270,
+
+}
+Level20 = {
+    completed = true,
+    birds = 4,
+    score = 65080,
+    lowScore = 65080,
+
+}
+Level38 = {
+    completed = true,
+    birds = 4,
+    score = 74080,
+    lowScore = 74080,
 
 }
 Level16 = {
@@ -124,32 +215,32 @@ Level6 = {
     lowScore = 67850,
 
 }
-Level52 = {
+Level17 = {
     completed = true,
-    birds = 4,
-    score = 47190,
-    lowScore = 47190,
+    birds = 3,
+    score = 36160,
+    lowScore = 36160,
 
 }
-Level44 = {
+Level21 = {
     completed = true,
-    birds = 7,
-    score = 69170,
-    lowScore = 69170,
+    birds = 3,
+    score = 45450,
+    lowScore = 45450,
 
 }
-Level23 = {
+Level41 = {
     completed = true,
     birds = 4,
-    score = 42860,
-    lowScore = 42860,
+    score = 23470,
+    lowScore = 23470,
 
 }
-Level3 = {
+Level42 = {
     completed = true,
     birds = 4,
-    score = 11120,
-    lowScore = 11120,
+    score = 103960,
+    lowScore = 103960,
 
 }
 Level10 = {
@@ -159,17 +250,17 @@ Level10 = {
     lowScore = 18460,
 
 }
-Level39 = {
+Level5 = {
     completed = true,
     birds = 3,
-    score = 62300,
-    lowScore = 62300,
+    score = 34870,
+    lowScore = 34870,
 
 }
-Level12 = {
+Level13 = {
     completed = true,
-    birds = 3,
-    score = 36470,
-    lowScore = 36470,
+    birds = 4,
+    score = 36420,
+    lowScore = 36420,
 
 }
