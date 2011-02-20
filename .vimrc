@@ -19,14 +19,32 @@ endif
 filetype plugin indent on                                                                       
 if !exists("autocommands_loaded")
     let autocommands_loaded = 1
-    autocmd BufNewFile,BufRead *.vg,*.vi,*.vs,*.vb,*.vh,*.tsk,*.vn,*.sv  :set ft=verilog
-    autocmd BufNewFile,BufRead *.do,*.cpf                                :set ft=tcl
-    autocmd BufNewFile,BufRead *.hc,*.hm,*.ht,*.hv                       :set ft=c
-    autocmd BufNewFile,BufRead *.mem                                     :set ft=hex
-    autocmd BufNewFile,BufRead *.syn,*.scr,*.pt,*synopsys*               :set ft=synopsys
-    autocmd BufNewFile,BufRead COMMIT_EDITMSG                            :set ft=git 
+   "autocmd! BufNewFile,BufRead *.vg,*.vi,*.vs,*.vb,*.vh,*.tsk,*.vn,*.sv  :set ft=verilog
+    autocmd! BufNewFile,BufRead      *.vi,*.vs,*.vb,*.vh,*.tsk,*.vn       :set ft=verilog
+    autocmd! BufNewFile,BufRead                          *.svi,*.sva      :set ft=verilog_systemverilog
+    autocmd! BufNewFile,BufRead *.do,*.cpf,*.lec,*.dc                     :set ft=tcl
+    autocmd! BufNewFile,BufRead *.hc,*.hm,*.ht,*.hv                       :set ft=c
+    autocmd! BufNewFile,BufRead *.mem                                     :set ft=hex
+    autocmd! BufNewFile,BufRead *.cir                                     :set ft=spice
+    autocmd! BufNewFile,BufRead *.tcshrc,*.cshrc                          :set ft=tcsh
+    autocmd! BufNewFile,BufRead *.syn,*.scr,*.pt,*synopsys*               :set ft=synopsys
+    autocmd! BufNewFile,BufRead COMMIT_EDITMSG                            :set ft=git 
+    autocmd! BufNewFile,BufRead *.zu,*.zwt                                :set ft=zimbu
 endif
 
+" Disabled " looks for DokuWiki headlines in the first 20 lines
+" Disabled " of the current buffer
+" Disabled fun IsDokuWiki()
+" Disabled   if match(getline(1,20),'^ \=\(=\{2,6}\).\+\1 *$') >= 0
+" Disabled     set textwidth=0
+" Disabled     set wrap
+" Disabled     set linebreak
+" Disabled     set filetype=dokuwiki
+" Disabled   endif
+" Disabled endfun
+" Disabled  
+" Disabled " check for dokuwiki syntax
+" Disabled autocmd BufWinEnter *.txt call IsDokuWiki()
 
 set number
     if &t_Co > 2 || has("gui_running")
@@ -44,37 +62,46 @@ set number
             colors fruity
         " For C-A, C-X to increase or decrease
         nunmap <C-A>
+    elseif (&t_Co == 88)
+       "colors fruity.transparent
+        colors transparent
+       "hi Normal ctermbg=NONE
     else
-                "colors darkblue
-                "colors torte
-                colors transparent
+        "arrow key nullified after screen"map! ^? ^H    
+        "arrow key nullified after screen"map! ^[OA ^[ka 
+        "arrow key nullified after screen"map! ^[OB ^[ja
+        "arrow key nullified after screen"map! ^[OC ^[la
+        "arrow key nullified after screen"map! ^[OD ^[ha
+        "colors darkblue
+        "colors torte
+        colors transparent
     endif
 
 
-set diffexpr=MyDiff()
-function! MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
-    else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-    endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
+" set diffexpr=MyDiff()
+" function! MyDiff()
+"   let opt = '-a --binary '
+"   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+"   if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+"   let arg1 = v:fname_in
+"   if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+"   let arg2 = v:fname_new
+"   if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+"   let arg3 = v:fname_out
+"   if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+"   let eq = ''
+"   if $VIMRUNTIME =~ ' '
+"     if &sh =~ '\<cmd'
+"       let cmd = '""' . $VIMRUNTIME . '\diff"'
+"       let eq = '"'
+"     else
+"       let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+"     endif
+"   else
+"     let cmd = $VIMRUNTIME . '\diff'
+"   endif
+"   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+" endfunction
 
     set incsearch
     set nocompatible
@@ -89,7 +116,7 @@ endfunction
         "        noremap <C-Q>      <C-V>
 
 set smarttab expandtab
-set tabstop=4 shiftwidth=4
+set tabstop=8 shiftwidth=4
 set wildignore=*.o,*.obj,*.bak,*.exe
    
 let &titleold=expand("%:t:~") 
@@ -99,6 +126,7 @@ if !has("gui_running")
     set mouse=a   "will disable copying to clipboard "solution=SHIFT+MOUSE
     set mousemodel=popup
     if $TERM =~ 'screen*'
+        set term=xterm 
         set title
         set t_ts=k
         set t_fs=\
@@ -187,8 +215,8 @@ au VimEnter *.proj nested Project <afile>|q
 "  n... : where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
-"open all fold
-set foldlevel=20
+" "open all fold
+" set foldlevel=20
 
 " when we reload, tell vim to restore the cursor to the saved position
 augroup JumpCursorOnEdit
@@ -238,9 +266,13 @@ nmap ,v :e $MYVIMRC
 
 nmap ,n :tabnext<CR>:<BS>
 nmap ,p :tabprev<CR>:<BS>
+nmap ,m :tabprev<CR>:<BS>
 nmap ,t :tabnew<CR>:<BS>
 nmap ,e :NERDTreeToggle<CR>
 
-set kp=~/bin/ydict.pl
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+set statusline=%F%m%r%h%w\ [FMT=%{&ff}]\ [FT=%Y]\ [ASC=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
 
+set kp=~/bin/ydict.pl
+nmap ,j :%s/victor.chen/josh.huang/ig<CR>
 
