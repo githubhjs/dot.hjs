@@ -1,0 +1,108 @@
+#caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+#defscrollback 30000 # Use a 30000-line scrollback buffer
+startup_message off
+#shelltitle '> |'
+shelltitle '$ |bash'
+shelltitle '] |tcsh'
+
+# exchange ^A^a <=> ^Aa
+#bindkey -d ^Aa other
+#bindkey -d ^a  meta
+#defescape ^A^a
+#bind b exec $HOME/bin/b
+
+deflogin off
+bind r screen -t '# |root: ' sudo su 
+bind ^r screen -t '# |root: ' sudo su 
+#vbell_msg "Blah! Blah!"
+vbell_msg "A bell! There's a bell! Very annoying bell!"
+bell_msg  "ohohoh! %n"
+bind d screen dp
+bind e screen dp -n 2
+bind f screen dp -n 3
+bind b screen bc -l
+# bind e screen exec.csh
+bind m screen make.csh
+#multiuser on
+#addacl sothat
+#bind R eval split "resize 24" redisplay
+#defscrollback 1000
+#multiuser on
+#addacl ascetic
+
+
+
+## hardstatus lastline '%{.kw}%?%-LW  %?%{+b ..w}%n%f %t%{-b ..w}%?%+LW%?%=%H %0C'
+##hardstatus lastline '%{.kw}%?%-LW  %?%{+b ..g}%n%f %t%{-b ..w}%?%+LW%?%=%H %0C'
+#hardstatus lastline '%{.kw}%?%-LW  %?%{+b ..g}%n%f %t%{-b ..w}%?%+LW%?%=%H %0C:%s'
+hardstatus lastline '%{= dd}%?%-LW  %?%{+b ..g}%n%f %t%{-b ..w}%?%+LW%?%=%H %0C:%s'
+
+#termcap  xterm* "" 'kl=\EOD:kr=\EOC:ku=\EOA:kd=\EOB:bs=^?'
+#terminfo xterm* "" 'kl=\EOD:kr=\EOC:ku=\EOA:kd=\EOB'
+#termcap  vt220* "" 'kl=\EOD:kr=\EOC:ku=\EOA:kd=\EOB:bs=^?'
+#termcapinfo xterm* 'mb=\E[5m:md=\E[1m:me=\E[m:mr=\E[7m:ti@:te@'
+
+# unsetenv DISPLAY
+# setenv TERM screen
+bind C screen
+# caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+# caption always "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0C %A  "
+#defc1 off
+defencoding utf8
+bind b encoding big5 utf9
+bind u encoding utf8 utf8
+bind j focus down
+bind k focus up
+# altscreen on
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason #[josh] will cause grep becames black
+#attrcolor b ".I"
+
+#[josh]#attrcolor b "R"
+#[josh]#    Change the color to bright red if bold text is to be printed.
+#[josh]#attrcolor u "-u b"
+#[josh]#    Use blue text instead of underline.
+#[josh]#attrcolor b ".I"
+#[josh]#    Use bright colors for bold text. Most terminal emulators do this already.
+#[josh]#attrcolor i "+b"
+#[josh]#    Make bright colored text also bold.
+
+# tell screen how to set colors. AB = background, AF=foreground
+#termcapinfo xterm* 'mb=\E[5m:Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm:ti@:te@' 'Co#256'
+
+# erase background with current bg color
+defbce "on" 
+
+
+# allow people to attach to my screen
+multiuser on
+
+# allow the following people full control
+addacl root,josh.huang
+aclchg josh.huang +rwx “#?”
+
+# allow everyone readonly access
+aclchg *,!aledesma -rwx “#?”
+
+# setup 10,000 lines of available scrollback — copy/paste
+defscrollback 30000
+
+# fix scrollback in putty
+termcapinfo xterm* ti@:te@
+
+
+##colorful caption
+#caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+#
+#sessionname
+#alias s "screen -S ` date -R| sed -e 's/ /_/ig' `"
+
+bind s #cancel C-a s for xoff
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+#caption splitonly "%{= dd}"
+caption splitonly "%{= dg}-"
+hardstatus string '%{= dg}[ %{m}%H %{g}][%= %{= dd}%?%-Lw%?%{=b dR}(%{W}%n*%f %t%?(%u)%?%{=b dR})%{= dw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b dC}[%y/%m/%d %0c:%s]%{W}'
+
