@@ -50,10 +50,11 @@ bind C screen
 # caption always "%{dk}%{+b K}> %{W}%n %t %{K}<%{W}%=%{+b K}load{%l} %{C}$USER@%{W}%H %{db}%{W}  %0C %A  "
 #defc1 off
 defencoding utf8
-bind b encoding big5 utf9
+bind b encoding big5 utf8
 bind u encoding utf8 utf8
 bind j focus down
 bind k focus up
+bind ^s next
 # altscreen on
 
 # terminfo and termcap for nice 256 color terminal
@@ -100,9 +101,10 @@ termcapinfo xterm* ti@:te@
 #sessionname
 #alias s "screen -S ` date -R| sed -e 's/ /_/ig' `"
 
-bind s #cancel C-a s for xoff
+#bind s #cancel C-a s for xoff
 #hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
 #caption splitonly "%{= dd}"
 caption splitonly "%{= dg}-"
-hardstatus string '%{= dg}[ %{m}%H %{g}][%= %{= dd}%?%-Lw%?%{=b dR}(%{W}%n*%f %t%?(%u)%?%{=b dR})%{= dw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b dC}[%y/%m/%d %0c:%s]%{W}'
+#remove sec#hardstatus string '%{= dg}[ %{m}%H %{g}][%= %{= dd}%?%-Lw%?%{=b dR}(%{W}%n*%f %t%?(%u)%?%{=b dR})%{= dw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b dC}[%y/%m/%d %0c:%s]%{W}'
+hardstatus string '%{= dg}[ %{m}%H %{g}][%= %{= dd}%?%-Lw%?%{=b dR}(%{W}%n*%f %t%?(%u)%?%{=b dR})%{= dw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b dC}[%y/%m/%d %0c]%{W}'
 
