@@ -1,0 +1,121 @@
+;; Git Configuration ;;
+; vim: set ft=config:
+[user]
+    name = Josh Huang
+    email = josh.huang@mstarsemi.com
+    signingkey = 927C152C
+;   signingkey = 1847B956
+;   web.browser = firefox
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+[alias]
+    ad = add
+    ann = annotate
+    br = branch
+    ci = commit
+    cia = commit --all
+    ciasm = commit -a -s -m "!!"
+    co = checkout
+    cvs = cvsimport -v 
+    desc = describe
+    di = diff
+    div = diff | gvim -R -
+    graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+    k = !gitk
+    lc = log ORIG_HEAD.. --stat --no-merges
+    lgo = log --pretty=format:'%h : %s' --date-order --graph
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    ll = log --date=local
+    ls = log --stat
+    p4ci = p4 submit --verbose --trust-me-like-a-fool            ;; Only for git-p4.hausmann
+    p4cirst = p4 submit --verbose --trust-me-like-a-fool --reset ;; Only for git-p4.hausmann
+    rebi = rebase --interactive
+    rshd = reset --hard
+    sg = stage
+    sh = show
+    st = status
+    svnci = svn dcommit
+    svnfhead = svn fetch --revision HEAD 
+    svninit = svn init
+    unadd = update-index --force-remove
+    who = shortlog -s --
+  ; http://plog.longwin.com.tw/my_note-unix/2009/05/19/git-learn-initial-command-2009
+  ; * git log # 將所有 log 秀出
+  ; * git log --all # 秀出所有的 log (含 branch)
+  ; * git log -p # 將所有 log 和修改過得檔案內容列出
+  ; * git log --stat --summary # 查每個版本間的更動檔案和行數
+  ; * git log filename # 這個檔案的所有 log
+  ; * git log directory # 這個目錄的所有 log
+  ; * git log -S'foo()' # log 裡面有 foo() 這字串的.
+  ; * git log --no-merges # 不要秀出 merge 的 log
+  ; * git log --since="2 weeks ago" # 最後這 2週的 log
+  ; * git log --pretty=oneline # 秀 log 的方式
+  ; * git log --pretty=short # 秀 log 的方式
+  ; * git log --pretty=format:'%h was %an, %ar, message: %s'
+  ; * git log --pretty=format:'%h : %s' --graph # 會有簡單的文字圖形化, 分支等.
+  ; * git log --pretty=format:'%h : %s' --topo-order --graph # 依照主分支排序
+  ; * git log --pretty=format:'%h : %s' --date-order --graph # 依照時間排序
+  ; * git show ebff # 查 log 是 commit ebff810c461ad1924fc422fd1d01db23d858773b 的內容
+  ; * git show v1 # 查 tag:v1 的修改內容
+  ; * git show v1:test.txt # 查 tag:v1 的 test.txt 檔案修改內容
+  ; * git show HEAD # 此版本修改的資料
+  ; * git show HEAD^ # 前一版修改的資料
+  ; * git show HEAD^^ # 前前一版修改的資料
+  ; * git show HEAD~4 # 前前前前一版修改的資料
+  ; * git reset --hard HEAD # 還原到最前面
+  ; * git reset --hard HEAD~3
+  ; * git reset --soft HEAD~3
+  ; * git reset HEAD filename # 從 staging area 狀態回到 unstaging 或 untracked (檔案內容並不會改變)
+  ; * git grep "te" v1 # 查 v1 是否有 "te" 的字串
+  ; * git grep "te" # 查現在版本是否有 "te" 的字串
+  ; * git stash # 丟進暫存區
+  ; * git stash list # 列出所有暫存區的資料
+  ; * git stash pop # 取出最新的一筆, 並移除.
+  ; * git stash apply # 取出最新的一筆 stash 暫存資料. 但是 stash 資料不移除
+  ; * git stash clear # 把 stash 都清掉
+  ; * git merge
+  ; * git merge master
+  ; * git merge new-branch
+  ; * git ls-files -d # 查看已刪除的檔案
+  ; * git ls-files -d | xargs git checkout -- # 將已刪除的檔案還原
+  ; * git gc # 整理前和整理後的差異, 可由: git count-objects 看到.
+  ; * git fsck --full
+  ; * git revert HEAD # 回到前一次 commit 的狀態
+  ; * git revert HEAD^ # 回到前前一次 commit 的狀態
+  ; * git reset HEAD filename # 從 staging area 狀態回到 unstaging 或 untracked (檔案內容並不會改變)
+  ; * git checkout filename # 從 unstaging 狀態回到最初 Repository 的檔案(檔案內容變回修改前)
+  ; * git remote
+  ; * git remote add new-branch http://git.example.com.tw/project.git # 增加遠端 Repository 的 branch(origin -> project)
+  ; * git remote show # 秀出現在有多少 Repository
+  ; * git remote rm new-branch # 刪掉
+  ; * git remote update # 更新所有 Repository branch
+  ; * git branch -r # 列出所有 Repository branch
+  ; * git fetch origin
+  ; * git checkout --track -b reps-branch origin/reps-branch # 抓取 reps-branch, 並將此 branch 建立於 local 的 reps-branch
+  ; * git push origin :heads/reps-branch
+[core]
+    excludesfile = /users/josh.huang/.gitignore
+[http]
+;   proxy = http://proxy-gear.mstarsemi.com.tw:3128
+;   proxy = http://josh.huang@proxy-gear.mstarsemi.com.tw:3128
+    proxy = http://localhost:3128
+[gui]
+    spellingdictionary = en
+[pack]
+    threads = 0
+[merge]
+    summary = true
+[commit]
+;   template = /users/josh.huang/.gittemplate/t1.txt
+
+[github]
+    user = githubhjs
+    token = 8c4fd25918d19cf998a21027d49dd7fb
+; for use external pager ; [diff]
+; for use external pager ;     external = /users/josh.huang/bin/git_diff_wrapper
+; for use external pager ; [pager]
+; for use external pager ;     diff = 
+
