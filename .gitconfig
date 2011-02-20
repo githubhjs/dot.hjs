@@ -2,7 +2,7 @@
 ; vim: set ft=config:
 [user]
     name = Josh Huang
-    email = josh.huang@mstarsemi.com
+    email = josh.huang@domain.com
     signingkey = 927C152C
 ;   signingkey = 1847B956
 ;   web.browser = firefox
@@ -99,8 +99,8 @@
 [core]
     excludesfile = /users/josh.huang/.gitignore
 [http]
-;   proxy = http://proxy-gear.mstarsemi.com.tw:3128
-;   proxy = http://josh.huang@proxy-gear.mstarsemi.com.tw:3128
+;   proxy = http://proxy-gear.domain.com.tw:3128
+;   proxy = http://josh.huang@proxy-gear.domain.com.tw:3128
     proxy = http://localhost:3128
 [gui]
     spellingdictionary = en
