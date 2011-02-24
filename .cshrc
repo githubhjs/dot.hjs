@@ -127,7 +127,7 @@ alias r         'sudo su \!*'
 
 set path = ( /sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin \
         $HOME/bin $HOME/Programs \
-        /users/mstarsemi/scripts /users/mstarsemi /users/mstarsemi/bin/ \
+        /users/domain/scripts /users/domain /users/domain/bin/ \
         /users/josh.huang/bin/ \
         /usr/ports/Tools/scripts \
         /opt/ActiveTcl-8.5/bin   \
@@ -335,11 +335,11 @@ if (-f ~/.diralias) source ~/.diralias
 if ($USER == josh.huang) then
     if (-f $HOME/.mdp) then
         set mdp=`cat $HOME/.mdp`
-        if (! $?http_proxy) setenv http_proxy "http://josh.huang:$mdp@proxy-gear.mstarsemi.com.tw:3128/"
-        if (! $?https_proxy) setenv https_proxy "http://josh.huang:$mdp@proxy-gear.mstarsemi.com.tw:3128/"
+        if (! $?http_proxy) setenv http_proxy "http://josh.huang:$mdp@proxy-gear.domain.com.tw:3128/"
+        if (! $?https_proxy) setenv https_proxy "http://josh.huang:$mdp@proxy-gear.domain.com.tw:3128/"
     endif
 endif
-setenv no_proxy mstarsemi.com,mstarsemi.com.tw,172.16.18.108/24
+setenv no_proxy domain.com,domain.com.tw,172.16.18.108/24
 
 #source /tools/CAD/cshrc.verdi0707.64bitF
 setenv TZ "Asia/Taipei"
@@ -361,8 +361,8 @@ unsetenv SGE_EXECD_PORT
 #for qhost end
 
 #for p4v start
-setenv QTDIR /users/mstarsemi/bin/p4v-2008.1.164135/lib/p4v/qt4
-setenv P4VRES /users/mstarsemi/bin/p4v-2008.1.164135/lib/p4v/P4VResources
+setenv QTDIR /users/domain/bin/p4v-2008.1.164135/lib/p4v/qt4
+setenv P4VRES /users/domain/bin/p4v-2008.1.164135/lib/p4v/P4VResources
 setenv P4PORT 172.16.64.166:1666
 setenv P4CLIENT josh.huang--asic-work-t1_work002
 setenv P4USER mst_asic
