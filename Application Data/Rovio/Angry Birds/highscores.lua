@@ -1,3 +1,10 @@
+Level91 = {
+    completed = true,
+    birds = 4,
+    score = 42480,
+    lowScore = 42480,
+
+}
 Level44 = {
     completed = true,
     birds = 7,
@@ -19,6 +26,13 @@ Level1 = {
     lowScore = 10720,
 
 }
+Level32 = {
+    completed = true,
+    birds = 3,
+    score = 51500,
+    lowScore = 51500,
+
+}
 Level9 = {
     completed = true,
     birds = 2,
@@ -26,25 +40,25 @@ Level9 = {
     lowScore = 46510,
 
 }
-Level52 = {
+Level38 = {
     completed = true,
     birds = 4,
-    score = 47190,
-    lowScore = 47190,
+    score = 74080,
+    lowScore = 74080,
 
 }
-Level31 = {
+Level20 = {
     completed = true,
-    birds = 3,
-    score = 41120,
-    lowScore = 41120,
+    birds = 4,
+    score = 65080,
+    lowScore = 65080,
 
 }
-Level36 = {
+Level79 = {
     completed = true,
-    birds = 3,
-    score = 51210,
-    lowScore = 51210,
+    birds = 2,
+    score = 36590,
+    lowScore = 36590,
 
 }
 Level35 = {
@@ -96,6 +110,41 @@ Level53 = {
     lowScore = 42440,
 
 }
+Level45 = {
+    completed = true,
+    birds = 3,
+    score = 63500,
+    lowScore = 63500,
+
+}
+Level51 = {
+    completed = true,
+    birds = 4,
+    score = 47980,
+    lowScore = 47980,
+
+}
+Level40 = {
+    completed = true,
+    birds = 3,
+    score = 51190,
+    lowScore = 51190,
+
+}
+Level49 = {
+    completed = true,
+    birds = 4,
+    score = 73530,
+    lowScore = 73530,
+
+}
+Level87 = {
+    completed = true,
+    birds = 3,
+    score = 99800,
+    lowScore = 99800,
+
+}
 Level3 = {
     completed = true,
     birds = 4,
@@ -110,11 +159,25 @@ Level76 = {
     lowScore = 29210,
 
 }
+Level5 = {
+    completed = true,
+    birds = 3,
+    score = 34870,
+    lowScore = 34870,
+
+}
 Level88 = {
     completed = true,
     birds = 4,
     score = 62720,
     lowScore = 62720,
+
+}
+Level36 = {
+    completed = true,
+    birds = 3,
+    score = 51210,
+    lowScore = 51210,
 
 }
 Level57 = {
@@ -125,10 +188,45 @@ Level57 = {
 
 }
 LevelGE_2 = {
-    completed = false,
-    birds = 0,
-    score = 0,
+    completed = true,
+    birds = 1,
+    score = 51320,
     lowScore = 0,
+
+}
+Level27 = {
+    completed = true,
+    birds = 3,
+    score = 31600,
+    lowScore = 31600,
+
+}
+Level29 = {
+    completed = true,
+    birds = 3,
+    score = 30980,
+    lowScore = 30980,
+
+}
+Level66 = {
+    completed = true,
+    birds = 3,
+    score = 50530,
+    lowScore = 50530,
+
+}
+Level31 = {
+    completed = true,
+    birds = 3,
+    score = 41120,
+    lowScore = 41120,
+
+}
+Level18 = {
+    completed = true,
+    birds = 3,
+    score = 50800,
+    lowScore = 50800,
 
 }
 Level85 = {
@@ -138,11 +236,18 @@ Level85 = {
     lowScore = 58850,
 
 }
-Level2 = {
+Level30 = {
+    completed = true,
+    birds = 5,
+    score = 37620,
+    lowScore = 37620,
+
+}
+Level26 = {
     completed = true,
     birds = 3,
-    score = 25780,
-    lowScore = 25780,
+    score = 39270,
+    lowScore = 39270,
 
 }
 Level7 = {
@@ -150,6 +255,13 @@ Level7 = {
     birds = 4,
     score = 25140,
     lowScore = 25140,
+
+}
+Level72 = {
+    completed = true,
+    birds = 3,
+    score = 29270,
+    lowScore = 29270,
 
 }
 Level24 = {
@@ -166,13 +278,6 @@ Level4 = {
     lowScore = 37070,
 
 }
-Level66 = {
-    completed = true,
-    birds = 3,
-    score = 50530,
-    lowScore = 50530,
-
-}
 Level34 = {
     completed = true,
     birds = 3,
@@ -180,25 +285,53 @@ Level34 = {
     lowScore = 59890,
 
 }
-Level26 = {
+Level2 = {
     completed = true,
     birds = 3,
-    score = 39270,
-    lowScore = 39270,
+    score = 25780,
+    lowScore = 25780,
 
 }
-Level20 = {
+Level90 = {
     completed = true,
-    birds = 4,
-    score = 65080,
-    lowScore = 65080,
+    birds = 2,
+    score = 51080,
+    lowScore = 51080,
 
 }
-Level38 = {
+Level17 = {
+    completed = true,
+    birds = 3,
+    score = 36160,
+    lowScore = 36160,
+
+}
+Level13 = {
     completed = true,
     birds = 4,
-    score = 74080,
-    lowScore = 74080,
+    score = 36420,
+    lowScore = 36420,
+
+}
+Level41 = {
+    completed = true,
+    birds = 4,
+    score = 23470,
+    lowScore = 23470,
+
+}
+Level43 = {
+    completed = true,
+    birds = 1,
+    score = 64600,
+    lowScore = 64600,
+
+}
+Level52 = {
+    completed = true,
+    birds = 4,
+    score = 47190,
+    lowScore = 47190,
 
 }
 Level16 = {
@@ -215,11 +348,11 @@ Level6 = {
     lowScore = 67850,
 
 }
-Level17 = {
+Level42 = {
     completed = true,
-    birds = 3,
-    score = 36160,
-    lowScore = 36160,
+    birds = 4,
+    score = 103960,
+    lowScore = 103960,
 
 }
 Level21 = {
@@ -229,18 +362,18 @@ Level21 = {
     lowScore = 45450,
 
 }
-Level41 = {
+Level96 = {
     completed = true,
-    birds = 4,
-    score = 23470,
-    lowScore = 23470,
+    birds = 6,
+    score = 62570,
+    lowScore = 62570,
 
 }
-Level42 = {
+Level77 = {
     completed = true,
-    birds = 4,
-    score = 103960,
-    lowScore = 103960,
+    birds = 3,
+    score = 45060,
+    lowScore = 45060,
 
 }
 Level10 = {
@@ -250,17 +383,17 @@ Level10 = {
     lowScore = 18460,
 
 }
-Level5 = {
+Level28 = {
     completed = true,
-    birds = 3,
-    score = 34870,
-    lowScore = 34870,
+    birds = 2,
+    score = 55470,
+    lowScore = 55470,
 
 }
-Level13 = {
+Level75 = {
     completed = true,
     birds = 4,
-    score = 36420,
-    lowScore = 36420,
+    score = 41220,
+    lowScore = 41220,
 
 }
