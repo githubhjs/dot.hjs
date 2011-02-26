@@ -1,31 +1,31 @@
-lastOpenLevelLP3 = 3
+gameStarted = true
 openGoldenEggLevels = {
     Level3 = 2,
 
 }
-lastOpenLevelLP4 = 7
-boomerangBirdAchieved2 = true
-lp4Started = true
+lastOpenLevelLP4 = 10
+gameStarts = 11
+selectedEpisode = 1
 lastOpenLevelLP2 = 2
-lp3Started = true
-lastOpenLevel = 64
+lp4Started = true
+lastOpenLevelLP3 = 3
 theme2Completed = true
-gameCompleted = true
-audioEnabled = false
-eaglesUsedIn = {
+currentLevelSelectionPages = {
+    pack4 = 1,
+    basic = 3,
+    pack3 = 3,
+    extra = 1,
+    goldeneggs = 1,
 
 }
+audioEnabled = false
+cumulativeScore = "3735040"
 bullsEye = true
-playtime = "19041"
-gameStarted = true
-cumulativeStars = 132
+playtime = "19996"
+totalLevelsCompleted = 78
+cumulativeStars = 138
+boomerangBirdAchieved2 = true
 lp2Started = true
-cumulativeScore = "3572160"
-mightyEagleEnabled = false
-birdsShooted = 1216
-currentZoomLevelMainMenu = 1.83333
-wilhelmTell = true
-gameRestarted = 77
 tutorials = {
     BIRD_GREY = {
         sprite = "TUTORIAL_4",
@@ -43,22 +43,27 @@ tutorials = {
         sprite = "TUTORIAL_3",
 
     },
-    BIRD_BOOMERANG = {
-        sprite = "TUTORIAL_6",
+    BIRD_GREEN = {
+        sprite = "TUTORIAL_5",
 
     },
     BIRD_BIG_BROTHER = {
         sprite = "TUTORIAL_7",
 
     },
-    BIRD_GREEN = {
-        sprite = "TUTORIAL_5",
+    BIRD_BOOMERANG = {
+        sprite = "TUTORIAL_6",
 
     },
 
 }
-currentMainMenuTheme = "theme1"
-totalLevelsCompleted = 75
+lastOpenLevel = 64
+currentZoomLevelMainMenu = 1.66667
+wilhelmTell = true
+gameRestarted = 81
+birdsShooted = 1291
+currentMainMenuTheme = "theme10"
+lp3Started = true
 eaglesAvailable = {
     extra = 1,
     pack4 = 1,
@@ -66,15 +71,10 @@ eaglesAvailable = {
     basic = 1,
 
 }
-currentLevelSelectionPages = {
-    pack4 = 1,
-    basic = 3,
-    pack3 = 3,
-    goldeneggs = 1,
-    extra = 1,
+mightyEagleEnabled = false
+averagePlaytime = "1904"
+theme1Completed = true
+gameCompleted = true
+eaglesUsedIn = {
 
 }
-averagePlaytime = "1734"
-theme1Completed = true
-selectedEpisode = 1
-gameStarts = 10
