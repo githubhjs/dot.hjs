@@ -1,24 +1,24 @@
 lp4Started = true
-lastOpenLevelLP2 = 2
+lastOpenLevelLP2 = 6
+backwardsBirdCount = 1
 bullsEye = true
-playtime = "22773"
-lp2Started = true
-currentMainMenuTheme = "theme12"
-totalLevelsCompleted = 89
-averagePlaytime = "1817"
-gameStarts = 12
-lastOpenLevelLP3 = 3
-openGoldenEggLevels = {
-    Level3 = 2,
-
-}
-lastOpenLevelLP4 = 21
-theme9Completed = true
-theme2Completed = true
-audioEnabled = false
-selectedEpisode = 1
-cumulativeStars = 155
+playtime = "26235"
+boomerangBirdAchieved2 = true
+currentMainMenuTheme = "theme6"
+totalLevelsCompleted = 108
+averagePlaytime = "1446"
+gameStarts = 19
 gameStarted = true
+theme10Completed = true
+lastOpenLevelLP4 = 31
+theme9Completed = true
+gameCompleted = true
+audioEnabled = false
+gameRestarted = 92
+selectedEpisode = 1
+lastOpenLevel = 64
+cumulativeStars = 187
+lp2Started = true
 tutorials = {
     BIRD_GREY = {
         sprite = "TUTORIAL_4",
@@ -36,27 +36,37 @@ tutorials = {
         sprite = "TUTORIAL_3",
 
     },
-    BIRD_BOOMERANG = {
-        sprite = "TUTORIAL_6",
+    BIRD_GREEN = {
+        sprite = "TUTORIAL_5",
 
     },
     BIRD_BIG_BROTHER = {
         sprite = "TUTORIAL_7",
 
     },
-    BIRD_GREEN = {
-        sprite = "TUTORIAL_5",
+    BIRD_BOOMERANG = {
+        sprite = "TUTORIAL_6",
 
     },
 
 }
-gameCompleted = true
-gameRestarted = 87
-currentZoomLevelMainMenu = 1.66667
+cumulativeScore = "5791170"
+birdsShooted = 1705
+currentZoomLevelMainMenu = 3.26667
 wilhelmTell = true
-cumulativeScore = "4456800"
-mightyEagleEnabled = false
-boomerangBirdAchieved2 = true
+openGoldenEggLevels = {
+    Level3 = 2,
+
+}
+currentLevelSelectionPages = {
+    pack4 = 3,
+    basic = 3,
+    pack3 = 1,
+    extra = 1,
+    goldeneggs = 1,
+
+}
+theme2Completed = true
 lp3Started = true
 eaglesAvailable = {
     extra = 1,
@@ -65,17 +75,10 @@ eaglesAvailable = {
     basic = 1,
 
 }
-currentLevelSelectionPages = {
-    pack4 = 2,
-    basic = 3,
-    pack3 = 3,
-    goldeneggs = 1,
-    extra = 1,
-
-}
-birdsShooted = 1445
+mightyEagleEnabled = false
+boomerangBirdAchieved = true
 theme1Completed = true
-lastOpenLevel = 64
+lastOpenLevelLP3 = 8
 eaglesUsedIn = {
 
 }
