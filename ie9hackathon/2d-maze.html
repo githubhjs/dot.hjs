@@ -16,6 +16,54 @@ This text is displayed if your browser does not support HTML5 Canvas.
 </div> 
 
 <script type="text/javascript"> 
+// A // // a 32x24 block map
+// A // var map = [
+// A //   [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+// A //   [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+// A //   [1,0,0,2,0,0,0,0,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+// A //   [1,0,0,2,0,0,0,0,2,2,2,2,2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+// A //   [1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+// A //   [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+// A //   [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+// A // ];
+// A // var mapWidth = 0;  // number of map blocks in x-direction
+// A // var mapHeight = 0;  // number of map blocks in y-direction
+// A // var miniMapScale = 8;  // how many pixels to draw a map block
+// A // 
+// A // function init() {
+// A //   mapWidth = map[0].length;
+// A //   mapHeight = map.length;
+// A // 
+// A //   drawMiniMap();
+// A // }
+// A // 
+// A // 
+// A // function drawMiniMap() {
+// A //   // draw the topdown view minimap
+// A //   var miniMap = $("minimap");
+// A //   miniMap.width = mapWidth * miniMapScale;  // resize the internal canvas dimensions 
+// A //   miniMap.height = mapHeight * miniMapScale;
+// A //   miniMap.style.width = (mapWidth * miniMapScale) + "px";  // resize the canvas CSS dimensions
+// A //   miniMap.style.height = (mapHeight * miniMapScale) + "px";
+// A // 
+// A //   // loop through all blocks on the map
+// A //   var ctx = miniMap.getContext("2d");
+// A //   for (var y=0;y<mapHeight;y++) {
+// A //     for (var x=0;x<mapWidth;x++) {
+// A //       var wall = map[y][x];
+// A //       if (wall > 0) {  // if there is a wall block at this (x,y) ...
+// A //         ctx.fillStyle = "rgb(200,200,200)";
+// A //         ctx.fillRect(  // ... then draw a block on the minimap
+// A //           x * miniMapScale,
+// A //           y * miniMapScale,
+// A //           miniMapScale,miniMapScale
+// A //         );
+// A //       }
+// A //     }
+// A //   }
+// A // }
+
+
 var canvas; 
 var ctx; 
 var dx = 5; 
