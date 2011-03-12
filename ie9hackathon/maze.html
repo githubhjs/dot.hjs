@@ -1,6 +1,11 @@
 <html>
 <head>
-<script type="application/x-javascript">
+</head>
+<body> <!-- onLoad="maze();">-->
+<canvas id="canvas" width="100" height="100">Your browser does not support canvas.</canvas>
+<br/>
+<!--<script type="application/x-javascript">-->
+<script type="text/javascript"> 
     var board = new Array();
     var drawStack;
     var SIZE = 60;
@@ -115,12 +120,8 @@
     }
 
         
-
+maze();
 </script>
-</head>
-<body onLoad="maze();">
-<canvas id="canvas" width="100" height="100">Your browser does not support canvas.</canvas>
-<br/>
 <div style="clear:left; margin-left:200px; background-color: #999999; height:24px; width:120px; text-align: center; font: 9pt/17pt georgia;  color: #293033;  border: 3px solid #293033;" onClick="maze()">Reset</div>
 </body>
 </html>
