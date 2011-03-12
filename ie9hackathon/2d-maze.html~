@@ -112,7 +112,7 @@ collision = 1;
 function draw() { 
 clear(); 
 ctx.fillStyle = "purple"; 
-rect(x, y, 15, 15); 
+rect(x, y, 15,15); 
 } 
 
 init(); 

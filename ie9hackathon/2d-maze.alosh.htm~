@@ -17,6 +17,7 @@
         <div class="author">by aloshbennett on February 15th, 2011</div>
       </div><!--end post header-->    
       <div class="entry clear">
+                <p>There are a lot of features that HTML5 bring. What makes canvas popular?</p>
 <p><iframe src="http://www.aloshbennett.in/apps/maze.html" width="370" height="390" frameborder="0"><br/></iframe><br />
 There!</p>
 <p>Canvas provides a screen area onto which you could draw 2D shapes and images. The set of APIs are simple. But the strength of the canvas comes from how you could manipulate it using javascript.</p>
