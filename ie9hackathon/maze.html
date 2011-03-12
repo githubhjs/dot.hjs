@@ -8,10 +8,75 @@
     var CHIP = 5;
     var context;
     var currDir = 'X';
+
+function clear() { 
+}
+
+function doKeyDown(evt){ 
+switch (evt.keyCode) { 
+case 87: /* Up */ 
+if (y - dy > 0){ 
+y -= dy; 
+clear(); 
+checkcollision(); 
+if (collision == 1){ 
+y += dy; 
+collision = 0; 
+} 
+} 
+
+break; 
+case 83: /* Down */ 
+if (y + dy < HEIGHT ){ 
+y += dy; 
+clear(); 
+checkcollision(); 
+if (collision == 1){ 
+y -= dy; 
+collision = 0; 
+} 
+} 
+
+break; 
+case 65: /* Left */ 
+if (x - dx > 0){ 
+x -= dx; 
+clear(); 
+checkcollision(); 
+if (collision == 1){ 
+x += dx; 
+collision = 0; 
+} 
+} 
+break; 
+case 68: /* Right */ 
+if ((x + dx < WIDTH)){ 
+x += dx; 
+clear(); 
+checkcollision(); 
+if (collision == 1){ 
+x -= dx; 
+collision = 0; 
+} 
+} 
+break; 
+} 
+} 
+
+function checkcollision() { 
+var imgd = ctx.getImageData(x, y, 15, 15); 
+var pix = imgd.data; 
+for (var i = 0; n = pix.length, i < n; i += 4) { 
+if (pix[i] == 0) { 
+collision = 1; 
+} 
+} 
+} 
     function maze() {
         init();
         explorePath(1,1);
         drawBoard();
+        window.addEventListener('keydown',doKeyDown,true); 
     }
  
     function init() {
@@ -44,7 +109,7 @@
         j = drawStack.shift();
         drawWhite(i,j);
         if(drawStack.length > 0) {
-            setTimeout('drawBoard()', 1);
+            drawBoard();
         }
     }
  
