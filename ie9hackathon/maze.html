@@ -14,6 +14,9 @@ var dx = 1;
 var dy = 1; 
 var WIDTH = CHIP*(SIZE+4); 
 var HEIGHT = CHIP*(SIZE+4); 
+var tStart;
+var tEnd;
+var tResult;
 
 function clear() { 
         drawWhite(x, y);
@@ -29,7 +32,8 @@ if (collision == 1){
 } else {
         clear(); 
         y -= dy; 
-        drawBrown(x,y);
+        drawPurple(x,y);
+      //doKeyDown(evt);
 }
 } 
 
@@ -42,7 +46,8 @@ if (collision == 1){
 } else {
         clear(); 
         y += dy; 
-        drawBrown(x,y);
+        drawPurple(x,y);
+      //doKeyDown(evt);
 } 
 } 
 
@@ -55,7 +60,8 @@ if (collision == 1){
 } else {
         clear(); 
         x -= dx; 
-        drawBrown(x,y);
+        drawPurple(x,y);
+      //doKeyDown(evt);
 }
 } 
 break; 
@@ -67,14 +73,25 @@ if (collision == 1){
 } else {
         clear(); 
         x += dx; 
-        drawBrown(x,y);
+        drawPurple(x,y);
+      //doKeyDown(evt);
 }
 } 
 break; 
 } 
 } 
 
+function auto()
+{}
+
 function checkcollision(xc, yc) { 
+        if ((xc >= SIZE-2) && (yc >= SIZE-2)) { 
+                tEnd=new Date(); 
+                tResult = tEnd.getTime() - tStart.getTime();
+              //strAlert = "Arrived
+                alert("Arrived");
+                alert(tResult);
+        }
         var imgd = context.getImageData((4+xc)*CHIP, (4+yc)*CHIP, 1, 1); 
         var pix = imgd.data; 
         if (pix[0] == 0) { 
@@ -89,9 +106,12 @@ function checkcollision(xc, yc) {
         drawBoard();
         x = 1;
         y = 1;
-        drawBrown(x,y);
+        drawPurple(x,y);
+        tStart=new Date();
         window.addEventListener('keydown',doKeyDown,true); 
     }
+
+        
  
     function init() {
         var canvas = document.getElementById("canvas");
@@ -118,7 +138,7 @@ function checkcollision(xc, yc) {
         context.fillRect(CHIP*(4+i), CHIP*(4+j), CHIP, CHIP);
     }
 
-    function drawBrown(i, j) {
+    function drawPurple(i, j) {
         context.fillStyle = "rgb(199,111,255)";
         context.fillRect(CHIP*(4+i), CHIP*(4+j), CHIP, CHIP);
     }
@@ -206,6 +226,7 @@ function checkcollision(xc, yc) {
 <body onLoad="maze();"> 
 <canvas id="canvas" width="100" height="100">Your browser does not support canvas.</canvas> 
 <br/> 
+<div style="clear:left; margin-left:200px; background-color: #999999; height:24px; width:120px; text-align: center; font: 9pt/17pt georgia;  color: #293033;  border: 3px solid #293033;" onClick="auto()">Auto</div> 
 <div style="clear:left; margin-left:200px; background-color: #999999; height:24px; width:120px; text-align: center; font: 9pt/17pt georgia;  color: #293033;  border: 3px solid #293033;" onClick="maze()">Reset</div> 
 </body> 
 </html> 
