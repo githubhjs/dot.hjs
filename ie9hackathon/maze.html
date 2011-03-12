@@ -8,74 +8,88 @@
     var CHIP = 5;
     var context;
     var currDir = 'X';
+    var x = 1;
+    var y = 1;
+var dx = 1; 
+var dy = 1; 
+var WIDTH = CHIP*(SIZE+4); 
+var HEIGHT = CHIP*(SIZE+4); 
 
 function clear() { 
+        drawWhite(x, y);
 }
 
 function doKeyDown(evt){ 
 switch (evt.keyCode) { 
 case 87: /* Up */ 
 if (y - dy > 0){ 
-y -= dy; 
-clear(); 
-checkcollision(); 
+        checkcollision(x, y - dy); 
 if (collision == 1){ 
-y += dy; 
-collision = 0; 
-} 
+        collision = 0; 
+} else {
+        clear(); 
+        y -= dy; 
+        drawBrown(x,y);
+}
 } 
 
 break; 
 case 83: /* Down */ 
 if (y + dy < HEIGHT ){ 
-y += dy; 
-clear(); 
-checkcollision(); 
+        checkcollision(x, y + dy); 
 if (collision == 1){ 
-y -= dy; 
-collision = 0; 
+        collision = 0; 
+} else {
+        clear(); 
+        y += dy; 
+        drawBrown(x,y);
 } 
 } 
 
 break; 
 case 65: /* Left */ 
 if (x - dx > 0){ 
-x -= dx; 
-clear(); 
-checkcollision(); 
+        checkcollision(x - dx, y); 
 if (collision == 1){ 
-x += dx; 
-collision = 0; 
-} 
+        collision = 0; 
+} else {
+        clear(); 
+        x -= dx; 
+        drawBrown(x,y);
+}
 } 
 break; 
 case 68: /* Right */ 
 if ((x + dx < WIDTH)){ 
-x += dx; 
-clear(); 
-checkcollision(); 
+        checkcollision(x + dx, y); 
 if (collision == 1){ 
-x -= dx; 
-collision = 0; 
-} 
+        collision = 0; 
+} else {
+        clear(); 
+        x += dx; 
+        drawBrown(x,y);
+}
 } 
 break; 
 } 
 } 
 
-function checkcollision() { 
-var imgd = ctx.getImageData(x, y, 15, 15); 
-var pix = imgd.data; 
-for (var i = 0; n = pix.length, i < n; i += 4) { 
-if (pix[i] == 0) { 
-collision = 1; 
-} 
-} 
+function checkcollision(xc, yc) { 
+        var imgd = context.getImageData((4+xc)*CHIP, (4+yc)*CHIP, 1, 1); 
+        var pix = imgd.data; 
+        if (pix[0] == 0) { 
+                collision = 1; 
+        } else {
+                collision = 0; 
+        }
 } 
     function maze() {
         init();
         explorePath(1,1);
         drawBoard();
+        x = 1;
+        y = 1;
+        drawBrown(x,y);
         window.addEventListener('keydown',doKeyDown,true); 
     }
  
@@ -101,6 +115,11 @@ collision = 1;
  
     function drawWhite(i, j) {
         context.fillStyle = "rgb(255,255,255)";
+        context.fillRect(CHIP*(4+i), CHIP*(4+j), CHIP, CHIP);
+    }
+
+    function drawBrown(i, j) {
+        context.fillStyle = "rgb(199,111,255)";
         context.fillRect(CHIP*(4+i), CHIP*(4+j), CHIP, CHIP);
     }
  
