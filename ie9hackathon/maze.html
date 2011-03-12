@@ -1,11 +1,9 @@
-<html>
-<head>
-</head>
-<body> <!-- onLoad="maze();">-->
-<canvas id="canvas" width="100" height="100">Your browser does not support canvas.</canvas>
-<br/>
-<!--<script type="application/x-javascript">-->
-<script type="text/javascript"> 
+<!DOCTYPE html>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<html> 
+<head> 
+<script type="application/x-javascript"> 
     var board = new Array();
     var drawStack;
     var SIZE = 60;
@@ -17,7 +15,7 @@
         explorePath(1,1);
         drawBoard();
     }
-
+ 
     function init() {
         var canvas = document.getElementById("canvas");
         canvas.width = CHIP*(SIZE+8);
@@ -37,12 +35,12 @@
             }
         }
     }
-
+ 
     function drawWhite(i, j) {
         context.fillStyle = "rgb(255,255,255)";
         context.fillRect(CHIP*(4+i), CHIP*(4+j), CHIP, CHIP);
     }
-
+ 
     function drawBoard() {
         i = drawStack.shift();
         j = drawStack.shift();
@@ -51,7 +49,7 @@
             setTimeout('drawBoard()', 10);
         }
     }
-
+ 
     function explorePath(i,j) {
         board[i][j] =1;
         drawStack.push(i,j);
@@ -70,7 +68,7 @@
             }
         }
     }
-
+ 
     function selectValue(options) {
         var selected = Math.floor(Math.random()*options.length);
         if(Math.floor(Math.random()*8) > 0) {
@@ -108,7 +106,7 @@
             for(y = -1; y < 2; y++) {
                 if(board[newI+x][newJ+y]==1) {
                     if((i==newI+x &&j==newJ)||(j==newJ+y && i == newI)) {
-
+ 
                     }
                     else
                         return false;
@@ -118,10 +116,14 @@
         }
         return true;
     }
-
+ 
         
-maze();
-</script>
-<div style="clear:left; margin-left:200px; background-color: #999999; height:24px; width:120px; text-align: center; font: 9pt/17pt georgia;  color: #293033;  border: 3px solid #293033;" onClick="maze()">Reset</div>
-</body>
-</html>
+ 
+</script> 
+</head> 
+<body onLoad="maze();"> 
+<canvas id="canvas" width="100" height="100">Your browser does not support canvas.</canvas> 
+<br/> 
+<div style="clear:left; margin-left:200px; background-color: #999999; height:24px; width:120px; text-align: center; font: 9pt/17pt georgia;  color: #293033;  border: 3px solid #293033;" onClick="maze()">Reset</div> 
+</body> 
+</html> 
