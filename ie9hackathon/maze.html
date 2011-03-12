@@ -4,7 +4,7 @@
 <script type="application/x-javascript"> 
     var board = new Array();
     var drawStack;
-    var SIZE = 60;
+    var SIZE = 20;
     var CHIP = 5;
     var context;
     var currDir = 'X';
@@ -17,6 +17,10 @@ var HEIGHT = CHIP*(SIZE+4);
 var tStart;
 var tEnd;
 var tResult;
+var keyT = 85;
+var keyF = 70;
+var keyG = 71;
+var keyH = 72;
 
 function clear() { 
         drawWhite(x, y);
@@ -85,19 +89,20 @@ function auto()
 {}
 
 function checkcollision(xc, yc) { 
-        if ((xc >= SIZE-2) && (yc >= SIZE-2)) { 
-                tEnd=new Date(); 
-                tResult = tEnd.getTime() - tStart.getTime();
-              //strAlert = "Arrived
-                alert("Arrived");
-                alert(tResult);
-        }
         var imgd = context.getImageData((4+xc)*CHIP, (4+yc)*CHIP, 1, 1); 
         var pix = imgd.data; 
         if (pix[0] == 0) { 
                 collision = 1; 
         } else {
                 collision = 0; 
+        }
+        if ((xc >= SIZE-2) && (yc >= SIZE-2)) { 
+                tEnd=new Date(); 
+                tResult = tEnd.getTime() - tStart.getTime();
+                strAlert = "Êï¹F¡I¡@ªá¤F" + tResult/1000.0 + "¬í";
+              //alert("Arrived");
+              //alert(tResult);
+                alert(strAlert);
         }
 } 
     function maze() {
