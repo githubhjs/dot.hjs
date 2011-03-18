@@ -2,23 +2,22 @@ lp4Started = true
 lastOpenLevelLP2 = 12
 backwardsBirdCount = 2
 bullsEye = true
-playtime = "29780"
-boomerangBirdAchieved2 = true
-currentMainMenuTheme = "theme4"
-totalLevelsCompleted = 122
-averagePlaytime = "1220"
-gameStarts = 25
-gameStarted = true
-theme10Completed = true
-lastOpenLevelLP4 = 33
+playtime = "30075"
+lp2Started = true
+currentMainMenuTheme = "theme13"
+totalLevelsCompleted = 123
+averagePlaytime = "1191"
+gameStarts = 26
+cumulativeScore = "7238850"
+openGoldenEggLevels = {
+    Level3 = 2,
+    Level9 = 2,
+
+}
+lastOpenLevelLP4 = 34
 theme9Completed = true
 gameCompleted = true
 audioEnabled = false
-lastOpenLevelLP3 = 11
-selectedEpisode = 1
-birdsShooted = 1978
-cumulativeStars = 214
-lp2Started = true
 tutorials = {
     BIRD_GREY = {
         sprite = "TUTORIAL_4",
@@ -36,37 +35,31 @@ tutorials = {
         sprite = "TUTORIAL_3",
 
     },
-    BIRD_GREEN = {
-        sprite = "TUTORIAL_5",
+    BIRD_BOOMERANG = {
+        sprite = "TUTORIAL_6",
 
     },
     BIRD_BIG_BROTHER = {
         sprite = "TUTORIAL_7",
 
     },
-    BIRD_BOOMERANG = {
-        sprite = "TUTORIAL_6",
+    BIRD_GREEN = {
+        sprite = "TUTORIAL_5",
 
     },
 
 }
-cumulativeScore = "7101540"
-gameRestarted = 99
-currentZoomLevelMainMenu = 1.95
+selectedEpisode = 1
+theme2Completed = true
+cumulativeStars = 217
+boomerangBirdAchieved2 = true
+lastOpenLevelLP3 = 11
+gameStarted = true
+birdsShooted = 2003
+currentZoomLevelMainMenu = 1.66667
 wilhelmTell = true
-openGoldenEggLevels = {
-    Level3 = 2,
-    Level9 = 2,
-
-}
-currentLevelSelectionPages = {
-    pack4 = 3,
-    basic = 2,
-    pack3 = 1,
-    extra = 1,
-    goldeneggs = 1,
-
-}
+theme10Completed = true
+mightyEagleEnabled = false
 lastOpenLevel = 64
 lp3Started = true
 eaglesAvailable = {
@@ -76,10 +69,17 @@ eaglesAvailable = {
     basic = 1,
 
 }
-mightyEagleEnabled = false
+currentLevelSelectionPages = {
+    pack4 = 3,
+    basic = 2,
+    pack3 = 1,
+    goldeneggs = 1,
+    extra = 1,
+
+}
 boomerangBirdAchieved = true
 theme1Completed = true
-theme2Completed = true
+gameRestarted = 99
 eaglesUsedIn = {
 
 }
