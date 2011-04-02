@@ -2,13 +2,13 @@ lp4Started = true
 lastOpenLevelLP2 = 12
 backwardsBirdCount = 2
 bullsEye = true
-playtime = "30075"
+playtime = "30705"
 lp2Started = true
-currentMainMenuTheme = "theme13"
-totalLevelsCompleted = 123
-averagePlaytime = "1191"
-gameStarts = 26
-cumulativeScore = "7238850"
+currentMainMenuTheme = "theme4"
+totalLevelsCompleted = 127
+averagePlaytime = "1136"
+gameStarts = 28
+cumulativeScore = "7502200"
 openGoldenEggLevels = {
     Level3 = 2,
     Level9 = 2,
@@ -50,13 +50,13 @@ tutorials = {
 
 }
 selectedEpisode = 1
-theme2Completed = true
-cumulativeStars = 217
+lastOpenLevelLP3 = 12
+cumulativeStars = 221
 boomerangBirdAchieved2 = true
-lastOpenLevelLP3 = 11
+theme2Completed = true
 gameStarted = true
-birdsShooted = 2003
-currentZoomLevelMainMenu = 1.66667
+gameRestarted = 101
+currentZoomLevelMainMenu = 1.95
 wilhelmTell = true
 theme10Completed = true
 mightyEagleEnabled = false
@@ -79,7 +79,7 @@ currentLevelSelectionPages = {
 }
 boomerangBirdAchieved = true
 theme1Completed = true
-gameRestarted = 99
+birdsShooted = 2045
 eaglesUsedIn = {
 
 }
