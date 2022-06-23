@@ -2,5 +2,14 @@
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# Alias - Bash / Zsh compatiple
 alias v=vim
+alias le=less
 alias ll='ls -l'
+alias datime="date +'%F_%Hh%M'"
+
+# env var - Bash / Zsh compatiple
+export PATH=$HOME/.local/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+
