@@ -78,30 +78,30 @@ set number
     endif
 
 
-" set diffexpr=MyDiff()
-" function! MyDiff()
-"   let opt = '-a --binary '
-"   if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-"   if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-"   let arg1 = v:fname_in
-"   if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-"   let arg2 = v:fname_new
-"   if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-"   let arg3 = v:fname_out
-"   if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-"   let eq = ''
-"   if $VIMRUNTIME =~ ' '
-"     if &sh =~ '\<cmd'
-"       let cmd = '""' . $VIMRUNTIME . '\diff"'
-"       let eq = '"'
-"     else
-"       let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
-"     endif
-"   else
-"     let cmd = $VIMRUNTIME . '\diff'
-"   endif
-"   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-" endfunction
+set diffexpr=MyDiff()
+function! MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
 
     set incsearch
     set nocompatible
@@ -215,8 +215,8 @@ au VimEnter *.proj nested Project <afile>|q
 "  n... : where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo
 
-" "open all fold
-" set foldlevel=20
+"open all fold
+set foldlevel=20
 
 " when we reload, tell vim to restore the cursor to the saved position
 augroup JumpCursorOnEdit
@@ -244,6 +244,48 @@ augroup JumpCursorOnEdit
  \ endif
 augroup END
 
+"""Josh: plugin manager
+call plug#begin('~/.vim/plugged')
+"Plug 'githubhjs/seoul256.vim'
+"Plug 'junegunn/goyo.vim'
+"Plug 'junegunn/limelight.vim'
+"Plug 'vim-scripts/taglist.vim'
+Plug 'junegunn/vim-plug'
+Plug 'vim-scripts/verilog_emacsauto.vim'
+Plug 'vim-scripts/systemverilog.vim'
+Plug 'vim-scripts/automatic-for-Verilog'
+Plug 'githubhjs/verilog_systemverilog_fix'
+Plug 'githubhjs/nerdtree'
+"Plug 'githubhjs/vim-visual-increment'
+Plug 'githubhjs/VisIncr'
+Plug 'githubhjs/vim-session'
+Plug 'githubhjs/vim-misc'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sensible'
+call plug#end()
+
+"""Josh: suggested by https://www.vim.org/scripts/script.php?script_id=4067
+   set fileformat=unix 
+   syntax on 
+
+   set expandtab        " use <space> char replace <tab> char 
+
+   set shiftwidth=4 
+   set tabstop=4 
+   set ruler 
+   
+   set smartindent 
+   set incsearch 
+   set hlsearch 
+
+   map <F4> :RtlTree<CR> 
+   map <F5> <C-w><C-w> 
+
+   """" save cursor position at exit edit file 
+   """autocmd BufReadPost * 
+   """    \ if (line("'\"") > 0 && line("'\"") <= line("$") | 
+   """    \    exe "normal g`\"" | 
+   """    \ endif 
 
 " Really useful " www.vim.org   : Visit frequently
 " Really useful " comp.editors  : Vim dominated newsgroup
