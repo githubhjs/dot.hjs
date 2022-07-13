@@ -11,6 +11,7 @@ docker-desktop|4.9.1
 dotnetfx|4.8.0.20220524
 drawio|19.0.3
 filezilla|3.60.1
+fsviewer|7.6.0.20220415
 git|2.36.1
 git.install|2.36.1
 gom-player|2.3.76.5340
