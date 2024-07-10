@@ -87,19 +87,22 @@ bindkey "\033[4~" end-of-line
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=( \
+git \
 aliases \
-colored-man \
 colorize \
 common-aliases \
 cp \
 dircycle \
-acroread \
 history \
 screen \
 tmuxinator \
 yum \
 z \
 virtualenv \
+timer \
+vim-interaction \
+vi-mode \
+zsh-interactive-cd \
 )
 
 autoload -U zmv
