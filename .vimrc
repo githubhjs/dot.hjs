@@ -262,6 +262,20 @@ Plug 'githubhjs/vim-session'
 Plug 'githubhjs/vim-misc'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
+Plug 'godlygeek/tabular'
+Plug 'ervandew/supertab'
+Plug 'luochen1990/rainbow'
+Plug 'vim-airline/vim-airline'
+Plug 'Yggdroot/indentLine'
+Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
+Plug 'dsimidzija/vim-nerdtree-ignore'
+Plug 'vim-scripts/LargeFile'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'will133/vim-dirdiff'
+Plug 'Exafunction/codeium.vim'
+Plug 'jaredgorski/spacecamp'
 call plug#end()
 
 """Josh: suggested by https://www.vim.org/scripts/script.php?script_id=4067
