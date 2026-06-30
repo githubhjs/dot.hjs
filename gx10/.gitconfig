@@ -1,0 +1,54 @@
+[user]
+    name = Josh_HUANG
+    email = huangjs@gmail.com
+    signingkey = 739C5CBDD849166CE2476F3C5AF379430CFEB839
+
+[alias]
+    # Logs
+    lg = log --graph --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) %C(cyan)<%an>%Creset' --abbrev-commit
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lolan = log --graph --decorate --pretty=oneline --abbrev-commit --all --name-status
+    j = log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"
+    jespersfavourit = log --pretty=format:\"%h%x09%an%x09%ad%x09%s\"
+
+    # Basic Commands
+    st = status
+    sd = status .
+    s = status -uno
+    br = branch
+    ci = commit
+    co = checkout
+    di = diff
+    ann = annotate
+    sh = show
+
+[core]
+    excludesfile = /home/hjs/.gitignore
+    fsync = none
+    compression = 0
+
+[credential]
+    helper = store
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[difftool]
+    prompt = false
+
+[pull]
+    rebase = false
+
+[commit]
+    gpgsign = false
+
+[gui]
+    pruneduringfetch = true
+
+[push]
+    recurseSubmodules = check

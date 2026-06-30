@@ -4,16 +4,18 @@ Personal dotfiles — primarily from **GX10** (ASUS GB10 Superchip, `192.168.2.9
 
 ---
 
-## Active machine: GX10
+## Active machine: GX10 (`gx10/`)
 
-| File / Dir | Purpose |
-|------------|---------|
-| `.bashrc` | Bash config |
-| `.zshrc` / `.zshenv` / `.zshrc.backup` | Zsh config (oh-my-zsh, NVM, PATH, aliases) |
-| `.profile` | Login shell env |
-| `.gitconfig` | Git aliases, signing key, core settings |
-| `.tmux.conf` | Tmux prefix, pane splits, status bar |
-| `.aider.conf.yml` | Aider AI: dark nord theme, qwen3 model, no auto-commit |
+Machine-specific files live under `gx10/` to avoid clobbering historical configs at root.
+
+| File | Purpose |
+|------|---------|
+| `gx10/.bashrc` | Bash config |
+| `gx10/.zshrc` / `.zshenv` / `.zshrc.backup` | Zsh (oh-my-zsh, NVM, PATH, aliases) |
+| `gx10/.profile` | Login shell env |
+| `gx10/.gitconfig` | Git aliases, signing key, core settings |
+| `gx10/.tmux.conf` | Tmux — TPM + catppuccin theme |
+| `gx10/.aider.conf.yml` | Aider AI: dark nord theme, qwen3 model, no auto-commit |
 | `.claude/settings.json` | Claude Code: fullscreen TUI, dark theme, sonnet-4-6 |
 | `.gemini/settings.json` | Gemini CLI: OAuth personal auth |
 | `.gemini/projects.json` | Gemini project directory mappings |
@@ -91,10 +93,10 @@ Secrets and runtime state are never committed:
 ## Syncing from GX10
 
 ```bash
-cd /tmp/dot.hjs   # or wherever you cloned this
-rsync -a /home/hjs/.claude/settings.json          .claude/
-rsync -a /home/hjs/.gemini/skills/                .gemini/skills/
-rsync -a /home/hjs/.gemini/settings.json          .gemini/
-cp /home/hjs/.zshrc /home/hjs/.bashrc /home/hjs/.vimrc /home/hjs/.tmux.conf /home/hjs/.gitconfig .
-git add -A && git commit -m "sync $(date +%Y-%m-%d)" && git push origin master
+cd /path/to/dot.hjs
+rsync -a /home/hjs/.claude/settings.json   .claude/
+rsync -a /home/hjs/.gemini/skills/         .gemini/skills/
+rsync -a /home/hjs/.gemini/settings.json   .gemini/
+cp /home/hjs/.zshrc /home/hjs/.bashrc /home/hjs/.vimrc /home/hjs/.tmux.conf /home/hjs/.gitconfig /home/hjs/.aider.conf.yml gx10/
+git add -A && git commit -m "sync gx10 $(date +%Y-%m-%d)" && git push origin master
 ```
