@@ -1,0 +1,26 @@
+# Aider Configuration File
+# Location: ~/.aider.conf.yml
+
+# 1. Terminal UX
+dark-mode: true
+pretty: true
+code-theme: nord
+user-input-color: "#88c0d0"
+assistant-output-color: "#e5e9f0"
+tool-output-color: "#a3be8c"
+tool-error-color: "#bf616a"
+tool-warning-color: "#ebcb8b"
+
+# 2. GX10 local defaults
+model: ollama/qwen3.5-queen-27b:latest
+editor-model: ollama/glm-4-9b-abliterated:latest
+
+# 3. Safe coding workflow
+auto-commits: false
+auto-test: true
+test-cmd: pytest -q
+gitignore: true
+yes-always: false
+
+# 4. Context tuning
+map-tokens: 4096

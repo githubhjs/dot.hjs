@@ -1,4 +1,76 @@
-#vim temp
+# vim temp
 *~
 *.swp
 *.swo
+
+# ── Secrets / credentials ─────────────────────────────────────────
+.git-credentials
+.youtube-creds.json
+.youtube-client-secret.json
+.homeassistant_token
+.npmrc
+.ssh/
+.acme.sh/
+.cloudflared/
+.oci/
+.gam/
+.pi/
+
+# ── Runtime / cache / session state ──────────────────────────────
+.cache/
+.local/
+.nv/
+
+# Claude Code — runtime data, keep only settings
+.claude.json
+.claude/cache/
+.claude/sessions/
+.claude/history.jsonl
+.claude/projects/
+.claude/jobs/
+.claude/telemetry/
+.claude/daemon
+.claude/daemon-auth-cooldown
+.claude/daemon-auth-status.json
+.claude/daemon.log
+.claude/shell-snapshots/
+.claude/stats-cache.json
+.claude/mcp-needs-auth-cache.json
+.claude/paste-cache/
+.claude/file-history/
+.claude/backups/
+.claude/scheduled_tasks.lock
+.claude/remote-settings.json
+.claude/policy-limits.json
+
+# Gemini — keep skills/settings, exclude auth and runtime
+.gemini/oauth_creds.json
+.gemini/google_accounts.json
+.gemini/installation_id
+.gemini/state.json
+.gemini/history/
+.gemini/tmp/
+.gemini/antigravity-cli/
+
+# Aider / agent runtime
+.aider.chat.history.md
+.aider.input.history
+.codex/
+.openclaw/
+.openhands/
+.chipagents/
+.afk/
+
+# Shell history / completions
+.zsh_history
+.bash_history
+.zcompdump*
+.lesshst
+.python_history
+.viminfo
+
+# Misc runtime
+.wget-hsts
+.sudo_as_admin_successful
+.tmux/
+.claude/settings.local.json
